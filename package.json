@@ -10,12 +10,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tokky0425/factful-bubble-chart.git"
+    "url": "git+https://github.com/tokky0425/factful-bubble-chart.git"
   },
   "bugs": {
-    "url": "https://github.com/Tokky0425/factful-bubble-chart/issues"
+    "url": "https://github.com/tokky0425/factful-bubble-chart/issues"
   },
-  "homepage": "https://github.com/Tokky0425/factful-bubble-chart#readme",
+  "homepage": "https://github.com/tokky0425/factful-bubble-chart#readme",
   "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
@@ -43,7 +43,6 @@
     "jest": "^24.1.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-syntax-highlighter": "^10.2.0",
     "style-loader": "^0.23.1",
     "styled-jsx": "^3.2.1",
     "webpack": "^4.29.5",

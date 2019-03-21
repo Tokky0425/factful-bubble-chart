@@ -1,5 +1,5 @@
 ## What is Factful Bubble Chart?
-Factful Bubble Chart is the bubble chart with 5 dimensions,
+Factful Bubble Chart is a bubble chart with 5 dimensions,
 1. X axis
 1. Y axis
 1. Time
@@ -8,7 +8,7 @@ Factful Bubble Chart is the bubble chart with 5 dimensions,
 
 which is inspired by [Hans Rosling](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen)'s analysis method and his book titled "Factfulness". 
 
-See demo page: [https://Tokky0425.github.io/factful-bubble-chart/](https://Tokky0425.github.io/factful-bubble-chart/)
+See the demo page: [https://tokky0425.github.io/factful-bubble-chart/](https://tokky0425.github.io/factful-bubble-chart/)
 
 ## Installation
 ```bash
@@ -136,10 +136,79 @@ fetch('data.json')
 | `onChartDidMount`,<br>`onChartDidUpdate` | `ref`: DOM of chart element<br>`timeKey`: Current time key |
 | `onPlotMouseEnter`,<br>`onPlotMouseLeave`,<br>`onPlotClick` | `ref`: DOM of plot element<br>`data`: Object that has fields below<br>`data.name`: Plot's identifiable name<br>`data.group`: Plot's group<br>`data.x`: Plot's value of x<br>`data.y`: Plot's value of y<br>`data.size`: Plot's value of size<br>`data.positionX`: Plot's position in 'px'<br>`data.positionY`: Plot's position in 'px' |
 
+**Example**
+```javascript
+const config = {
+  x: {
+    item: 'Birth Rate',
+    min: 0, // required
+    max: 9, // required
+    interval: 1, // required
+  },
+  y: {
+    item: 'Life Expectancy',
+    min: 20, // required
+    max: 90, // required
+    interval: 10, // required
+    unit: 'years',
+  },
+  normalizeType: 'min-max',
+  chartWidth: 760,
+  chartHeight: 540,
+  chartFrameStyle: {
+    backgroundColor: '#fff',
+  },
+  chartTimeVisible: true,
+  chartTimeStyle: {
+    color: '#dcdcdc',
+  },
+  maxPlotSize: 40,
+  minPlotSize: 1.5,
+  axisColor: '#333',
+  groupColor: {
+    'Asia': {
+      fill: 'rgb(255, 88, 114)',
+      stroke: '#333',
+    },
+    'Europe': {
+      fill: 'rgb(255, 231, 0)',
+      stroke: '#333',
+    },
+    'Africa': {
+      fill: 'rgb(0, 213, 233)',
+      stroke: '#333',
+    },
+    'Americas': {
+      fill: 'rgb(127, 235, 0)',
+      stroke: '#333',
+    },
+    'Oceania': {
+      fill: 'rgb(255,127,80)',
+      stroke: '#333',
+    },
+  },
+  onChartDidMount: (ref, timeKey) => {
+    console.log(ref, timeKey);
+  },
+  onChartDidUpdate: (ref, timeKey) => {
+    console.log(ref, timeKey);
+  },
+  onPlotMouseEnter: (ref, data) => {
+    console.log(ref, `${data.name}, group:${data.group}, x:${data.x}, y:${data.y}', size:${data.r}px, positionX:${data.positionX}px, positionY:${data.positionY}px`);
+  },
+  onPlotMouseLeave: (ref, data) => {
+    console.log(ref, `${data.name}, group:${data.group}, x:${data.x}, y:${data.y}', size:${data.r}px, positionX:${data.positionX}px, positionY:${data.positionY}px`);
+  },
+  onPlotClick: (ref, data) => {
+    console.log(ref, `${data.name}, group:${data.group}, x:${data.x}, y:${data.y}', size:${data.r}px, positionX:${data.positionX}px, positionY:${data.positionY}px`);
+  },
+};
+```
+
 ### 3. Add your controller
 Probably you want to add a controller that can update `timeKey` field to move the plots.
 
-In the example below, Slider from [Material-UI](https://material-ui.com/lab/slider/) is used.
+In the example below, `Slider` component from [Material-UI](https://material-ui.com/lab/slider/) is used.
 
 **index.js**
 
@@ -185,7 +254,7 @@ fetch('data.json')
 ### 3. That's it!
 Enjoy Seeing the facts of the world.
 
-Examples can be found in the [demo page](https://Tokky0425.github.io/factful-bubble-chart/).
+Examples can be found in the [demo page](https://tokky0425.github.io/factful-bubble-chart/).
 
 ## License
 
