@@ -1,0 +1,147 @@
+<html>
+<head>
+  <title>Factful Bubble Chart</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Factfll Bubble Chart is a React component that tells the facts of the world.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#3f51b5">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Factfull Bubble Chart">
+  <meta property="og:description" content="Factfll Bubble Chart is a React component that tells the facts of the world.">
+  <meta property="og:image" content="https://Tokky0425.github.io/factful-bubble-chart/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@Tokky0425">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/logo_180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/logo_192.png">
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  #root {
+    overflow: hidden;
+    min-width: 500px;
+    padding: 60px 80px;
+  }
+  .MuiSlider-thumb-7 {
+    width: 22px;
+    height: 22px;
+  }
+  a {
+    color: #3f51b5;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 340px;
+    min-width: 500px;
+    padding: 0 80px;
+  }
+  header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 100px;
+    height: 1px;
+    transform: translateX(-50%);
+    background-color: #3f51b5;
+  }
+  .header-logo {
+    width: 103px;
+  }
+  .header-ttl {
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+  }
+  .header-sub {
+    margin-top: 20px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+  }
+  .github-log {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+  }
+  .github-log:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 130%;
+    height: 130%;
+    border-radius: 50%;
+    background-color: rgba(63, 81, 181, 0.16);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .4s;
+  }
+  .github-log:hover:after {
+    transform: translate(-50%, -50%) scale(1);
+    transition: all .25s;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    min-width: 500px;
+    padding: 80px;
+    background-color: rgb(248,248,248);
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+  }
+  .footer-logo {
+    width: 50px;
+  }
+  .footer-ttl {
+    margin: 10px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2;
+    color: #111;
+  }
+  .footer-credit {
+    margin: 0;
+    font-size: 12px;
+    line-height: 2;
+    color: #111;
+  }
+  .footer-credit a {
+    color: #3f51b5;
+  }
+</style>
+<body>
+<noscript>
+  You need to enable JavaScript to run this app.
+</noscript>
+<header>
+  <a class="github-log" href="https://github.com/Tokky0425/factful-bubble-chart" target="_blank" rel="noopener">
+    <img src="./img/github-logo.svg" alt="">
+  </a>
+  <img class="header-logo" src="./img/logo.png" alt="">
+  <h1 class="header-ttl">Factfull Bubble Chart</h1>
+  <p class="header-sub">A React component that tells the facts of the world</p>
+</header>
+<div id="root"></div>
+<footer>
+  <img class="footer-logo" src="./img/logo.png" alt="">
+  <p class="footer-ttl">Factful Bubble Chart</p>
+  <p class="footer-credit">MIT © <a href="https://github.com/Tokky0425" target="_blank" rel="noopener">Masakatsu Tokita</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "name": "factful-bubble-chart",
+  "version": "0.0.1",
+  "description": "Factfll Bubble Chart is a React component that tells the facts of the world.",
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "bubble chart"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tokky0425/factful-bubble-chart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tokky0425/factful-bubble-chart/issues"
+  },
+  "homepage": "https://github.com/Tokky0425/factful-bubble-chart#readme",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "test": "jest",
+    "transpile": "babel src -d dist --copy-files",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d examples/dist",
+    "publish-demo": "npm run build && npm run deploy",
+    "prepublishOnly": "npm run transpile"
+  },
+  "author": "Masakatsu Tokita",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/lab": "^3.0.0-alpha.30",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "gh-pages": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.1.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-syntax-highlighter": "^10.2.0",
+    "style-loader": "^0.23.1",
+    "styled-jsx": "^3.2.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}
