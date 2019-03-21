@@ -207,7 +207,7 @@ const loadData = urls => Promise.all(urls.map(url => fetch(url)));
               <p><b>References</b></p>
               <p><a href="https://population.un.org/wpp/Download/Standard/Population/" target={'_blank'} rel={'noopener'}>https://population.un.org/wpp/Download/Standard/Population/</a></p>
               <p><a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD" target={'_blank'} rel={'noopener'}>https://data.worldbank.org/indicator/NY.GDP.PCAP.CD</a></p>
-              <p><a href="https://data.worldbank.org/indicator/SE.PRM.ENRR?view=chart" target={'_blank'} rel={'noopener'}>https://data.worldbank.org/indicator/SE.PRM.ENRR?view=chart</a></p>
+              <p><a href="https://data.worldbank.org/indicator/SE.PRM.ENRR" target={'_blank'} rel={'noopener'}>https://data.worldbank.org/indicator/SE.PRM.ENRR</a></p>
               <p><b>cf.</b> <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/114955-how-can-gross-school-enrollment-ratios-be-over-100" target={'_blank'} rel={'noopener'}>How can gross school enrollment ratios be over 100 percent?</a></p>
             </Box>
           </div>
