@@ -11,7 +11,7 @@ const Sample2 = ({config, rawData, dataSelected}) => {
 
   return (
     <Fragment>
-      <Title title={'GDP per capita & Fertility rate'}/>
+      <Title title={'GDP per capita & Birth rate'}/>
       <div style={{position: 'relative'}}>
         <FactfulBubbleChart config={config} rawData={rawData} timeKey={Math.round(timeKey)}/>
         <ChartInfo config={config} dataSelected={dataSelected}/>
