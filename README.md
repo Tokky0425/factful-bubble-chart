@@ -63,8 +63,8 @@ $ npm install --save factful-bubble-chart
 | `group` | `string` | Set value if you want to identify certain groups by coloring. (e.g. area name)<br>Not Required. |
 | `content` | `object` | Add statistical data here.<br>Each child object needs to have same number of data with same keys as other set of items. |
 | `size` | `number`, `float` | Size of plot. (e.g. population) |
-| `x` | `number`, `float` | Position of plot on x axis. (e.g. fertility rate) |
-| `y` | `number`, `float` | Position of plot on y axis. (e.g. life expectancy) |
+| `x` | `number`, `float` | Value of plot on x axis. (e.g. birth rate) |
+| `y` | `number`, `float` | Value of plot on y axis. (e.g. life expectancy) |
 
 ### 2. Create the component with the data
 **index.js**
@@ -114,8 +114,8 @@ fetch('data.json')
 | `normalizeType` | `string` | - | Try to set `min-max` if the sizes of the bubbles are not well balanced | False |
 | `chartWidth` | `number` | `760` | `max-width` of chart | False |
 | `chartHeight` | `number` | `480` | `height` of chart | False |
-| `maxPlotSize` | `number, float` | `40` | Maximum size of the largest plot of all | False |
-| `minPlotSize` | `number, float` | `1.5` | Minimum size of the largest plot of all | False |
+| `maxPlotSize` | `number, float` | `40` | Maximum `px` size of the largest plot of all | False |
+| `minPlotSize` | `number, float` | `1.5` | Minimum `px` size of the largest plot of all | False |
 | `chartFrameStyle` | `object` | - | Custom style for chart frame | False |
 | `chartTimeVisible` | `boolean` | `true` | Set false to hide time key behind plots | False |
 | `chartTimeStyle` | `object` | - | Custom style for time key behind plots | False |
@@ -134,7 +134,7 @@ fetch('data.json')
 | Callback | Arguments |
 | ---- | ---- |
 | `onChartDidMount`,<br>`onChartDidUpdate` | `ref`: DOM of chart element<br>`timeKey`: Current time key |
-| `onPlotMouseEnter`,<br>`onPlotMouseLeave`,<br>`onPlotClick` | `ref`: DOM of plot element<br>`data`: Object that has fields below<br>`data.name`: Plot's identifiable name<br>`data.group`: Plot's group<br>`data.x`: Plot's value of x<br>`data.y`: Plot's value of y<br>`data.size`: Plot's value of size<br>`data.positionX`: Plot's position in 'px'<br>`data.positionY`: Plot's position in 'px' |
+| `onPlotMouseEnter`,<br>`onPlotMouseLeave`,<br>`onPlotClick` | `ref`: DOM of plot element<br>`data`: Object that has fields below<br>`data.name`: Plot's identifiable name<br>`data.group`: Plot's group name<br>`data.x`: Plot's value of x<br>`data.y`: Plot's value of y<br>`data.size`: Plot's value of size<br>`data.positionX`: Plot's position in `px`<br>`data.positionY`: Plot's position in `px` |
 
 **Example**
 ```javascript
@@ -254,7 +254,8 @@ fetch('data.json')
 ### 3. That's it!
 Enjoy Seeing the facts of the world.
 
-Examples can be found in the [demo page](https://tokky0425.github.io/factful-bubble-chart/).
+Examples can be found in the [demo page](https://tokky0425.github.io/factful-bubble-chart/).<br>
+You can download demo json file as well.
 
 ## License
 
